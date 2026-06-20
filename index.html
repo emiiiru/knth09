@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth × Emil</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEARTS -->
+<div id="heart-container"></div>
+
+<!-- HEADER -->
+<header>
+    <h1>Kenneth × Emil</h1>
+</header>
+
+<!-- ===================== -->
+<!-- INTRO -->
+<!-- ===================== -->
+<section id="intro" class="screen">
+
+    <div class="intro-card" id="slide1">
+        <h2>I love you more than the distance between us</h2>
+        <button onclick="nextSlide(2)">Next</button>
+    </div>
+
+    <div class="intro-card hidden" id="slide2">
+        <h2>Distance means nothing <br>when someone means everything</h2>
+        <button onclick="nextSlide(3)">Next</button>
+    </div>
+
+    <div class="intro-card hidden" id="slide3">
+
+        <h2>Distance Between Us</h2>
+
+        <div class="distance-box">
+
+            <div class="pin">
+                <i class="fa-solid fa-location-dot"></i> Kenneth
+            </div>
+
+            <div class="curvy-line">
+                - - - - - - - -
+                
+            </div>
+
+            <div class="pin">
+                <i class="fa-solid fa-location-dot"></i> Emil
+            </div>
+
+        </div>
+
+        <h1 id="distanceCounter">0 KM</h1>
+
+        <button onclick="showPassword()">Continue</button>
+
+    </div>
+
+</section>
+
+<!-- ===================== -->
+<!-- PASSWORD -->
+<!-- ===================== -->
+<section id="password-section" class="screen hidden">
+
+    <div class="password-card">
+
+        <h2>Enter Secret Code</h2>
+
+        <input type="password" id="passwordInput" placeholder="Enter password" required>
+
+        <button type="submit" onclick="checkPassword()">Enter</button>
+
+        <p id="passwordMessage"></p>
+
+
+
+    </div>
+<button onclick="openClue()">
+    <i class="fa-solid fa-question"></i>
+</button>
+
+<div id="clue-modal" class="hidden">
+
+    <div class="clue-box">
+
+        <h1>Clue</h1>
+
+        <p>
+           Hi Baby, Please insert any date you remember about us.
+           just number of date no symbol,no letter, character and spacing 
+           <br>
+           <br>
+           eg:  <br>
+           1(month) 1(day) 26(year) <br>
+           1126
+           
+        </p>
+
+        <button onclick="closeClue()">Got it</button>
+
+    </div>
+
+</div>
+</section>
+
+<!-- ===================== -->
+<!-- HOME -->
+<!-- ===================== -->
+<section id="home-section" class="screen hidden">
+
+    <div class="dashboard">
+
+        <h2>Days Since</h2>
+        <p>May 23, 2026</p>
+
+        <div class="day-heart">❤️</div>
+
+        <h1 id="daysCounter">0 Days</h1>
+
+        <button onclick="updateDays()">Update Day</button>
+
+    </div>
+
+    <!-- ICON BUTTONS -->
+    <div class="home-buttons">
+
+        <button onclick="openLetter()">
+            <i class="fa-solid fa-envelope"></i>
+        </button>
+
+        <button onclick="openGallery()">
+            <i class="fa-solid fa-images"></i>
+        </button>
+
+        <button onclick="openSong()">
+            <i class="fa-solid fa-music"></i>
+        </button>
+
+        <button onclick="openAbout()">
+            <i class="fa-solid fa-user-group"></i>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===================== -->
+<!-- LETTER -->
+<!-- ===================== -->
+<section id="letter-section" class="screen hidden">
+
+    <div class="blur-bg"></div>
+
+    <div class="popup-letter">
+
+        <button onclick="showSection('home-section')">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <h2>Letter</h2>
+
+        <p id="typedLetter"></p>
+
+        <button onclick="openGallery()">
+            View → Gallery
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===================== -->
+<!-- GALLERY -->
+<!-- ===================== -->
+<section id="gallery-section" class="screen hidden">
+
+    <button onclick="showSection('home-section')">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <h2>Gallery</h2>
+    <p>Tap images to view </p>
+
+    <div class="gallery">
+
+        <img class="knth" src="images/r1.png">
+        <img class="knth" src="images/r2.png">
+        <img class="knth" src="images/r3.png">
+        <img class="knth" src="images/r4.jpeg">
+        <img class="knth" src="images/r5.jpeg">
+        <img class="knth" src="images/r6.jpeg">
+        <img class="knth" src="images/r7.jpeg">
+        <img class="knth" src="images/r8.jpeg">
+        <img class="knth" src="images/r9.jpeg">
+        <img class="knth" src="images/r10.jpeg">
+
+    </div>
+
+    <button onclick="openSong()">view → Song</button>
+
+</section>
+
+<!-- ===================== -->
+<!-- SONG -->
+<!-- ===================== -->
+<section id="song-section" class="screen hidden">
+
+    <button onclick="showSection('home-section')">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <h2>Song</h2>
+
+    <div class="songs">
+
+        <div class="song-card">
+            <img src="images/coversong1.jpeg">
+            <h4>Happier</h4>
+            <p>Liked by Kenneth</p>
+            <audio controls src="music/song1.mp3"></audio>
+        </div>
+
+        <div class="song-card">
+            <img src="images/coversong2.jpeg">
+            <h4>Fragile</h4>
+            <p>Liked by kenneth</p>
+            <audio controls src="music/song2.mp3"></audio>
+        </div>
+
+        <div class="song-card">
+            <img src="images/coversong3.jpeg">
+            <h4>Impostor Syndrome</h4>
+            <p>Liked by ken</p>
+            <audio controls src="music/song3.mp3"></audio>
+        </div>
+
+        <div class="song-card">
+            <img src="images/coversong4.jpeg">
+            <h4>Magnolia</h4>
+            <p>Like by Kenneth </p>
+            <audio controls src="music/song4.mp3"></audio>
+        </div>
+
+        <div class="song-card">
+            <img src="images/coversong5.jpeg">
+            <h4>The Cure</h4>
+            <p>Liked by Kenneth </p>
+            <audio controls src="music/song5.mp3"></audio>
+        </div>
+
+        <div class="song-card">
+            <img src="images/coversong6.jpeg">
+            <h4>Cars Outside</h4>
+            <p>Liked by Emil</p>
+            <audio controls src="music/song6.mp3"></audio>
+        </div>
+
+        <div class="song-card">
+            <img src="images/coversong7.jpeg">
+            <h4>Rewrite The Stars</h4>
+            <p>Liked by Emil</p>
+            <audio controls src="music/song7.mp3"></audio>
+        </div>
+
+        <div class="song-card">
+            <img src="images/coversong8.jpeg">
+            <h4>Pahina</h4>
+            <p>Liked by Emil</p>
+            <audio controls src="music/song8.mp3"></audio>
+        </div>
+
+        <div class="song-card">
+            <img src="images/coversong9.jpeg">
+            <h4>Blue Sky</h4>
+            <p>Liked by Emil</p>
+            <audio controls src="music/song9.mp3"></audio>
+        </div>
+
+        <div class="song-card">
+            <img src="images/coversong10.jpeg">
+            <h4>Magkunwari</h4>
+            <p>Liked by Emil</p>
+            <audio controls src="music/song10.mp3"></audio>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== -->
+<!-- ABOUT US -->
+<!-- ===================== -->
+<section id="about-section" class="screen hidden">
+
+    <button onclick="showSection('home-section')">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <h2>About Us</h2>
+
+    <div class="profiles">
+
+        <!-- EMIL -->
+        <div class="profile-card">
+
+            <img src="images/mil1.jpeg" class="circle">
+
+            <h3>Emil</h3>
+
+            <p><strong>Full Name:</strong> Emil John Constantino Apolonio Rey</p>
+            <p><strong>Nickname:</strong>Jay Jay</p>
+            <p><strong>Sex: </strong>Male</p>
+            <p><strong>Location: </strong> San Jose Del Monte Bulacan</p>
+            <p><strong>Age: </strong>17 years old</p>
+            <p><strong>Birthday:</strong> October 26 2008</p>
+            <p><strong>Zodiac:</strong> Scorpio</p>
+            <p><strong>Favorite Color:</strong> Blue, Violet, Green Red</p>
+            <p><strong>Film Likes: </strong> Alice in Borderlands, Wednesday, Your Name</p>
+            <p><strong>Dream Country:</strong> Japan, Korea, China</p>
+            <p><strong>Games</strong> Mobile Legends, Genshin Impact</p>
+            <p><strong>Hobbies:</strong> Drawing, Workout , Gaming</p>
+            <p><strong>Height: </strong> 168 cm</p>
+            <p><strong>Relationship: </strong> Taken ❤️</p>
+
+            <div class="gallery-mini">
+                <img class="knth" src="images/mil1.jpeg">
+                <img class="knth"src="images/mil2.jpeg">
+                <img class="knth"src="images/mil3.jpeg">
+                <img class="knth" src="images/mil4.jpeg">
+                <img class="knth" src="images/mil5.jpeg">
+                <img class="knth" src="images/mil6.jpeg">
+            </div>
+
+        </div>
+
+        <!-- KENNETH -->
+        <div class="profile-card">
+
+            <img src="images/knth1.jpeg" class="circle">
+
+            <h3>Kenneth</h3>
+
+            <p><strong>Full Name: </strong> John Kenneth Reyes Labita</p>
+            <p><strong>Nickname:</strong> Ken</p>
+            <p><strong>Sex: </strong>Male</p>
+            <p><strong>Location:</strong> Malolos Bulacan </p>
+            <p><strong>Age:</strong> 17 years old</p>
+            <p><strong>Birthday:</strong>September 9 2008</p>
+            <p><strong>Zodiac: </strong>Virgo</p>
+            <p><strong>Favorite Color:</strong> Wine Red, Ocean Blue, Sage Green</p>
+            <p><strong>Movie likes</strong> White chiks, Charlie's Angel</p>
+            <p><strong>Dream Country:</strong> Thailand, Paris, </p>
+            <p><strong>Games:</strong>Roblox</p>
+            <p><strong>Hobbies:</strong> Listening Music ,Readings, Cooking </p>
+            <p><strong>Height:</strong> 170cm</p>
+            <p><strong>Relationship:</strong> Taken ❤️</p>
+
+            <div class="gallery-mini">
+                <img class="knth"src="images/knth1.jpeg">
+                <img class="knth" src="images/knth2.jpeg">
+                <img class="knth" src="images/knth3.jpeg">
+                <img class="knth" src="images/knth4.jpeg">
+                <img class="knth" src="images/knth5.jpeg">
+                <img class="knth" src="images/knth6.jpeg">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="hidden">
+    <span id="closeLightbox">×</span>
+    <img id="lightboxImg">
+</div>
+
+<footer>
+
+    <h2>Kenneth × Emil</h2>
+
+    <p class="footer-text">
+        A small place made with love, memories, music, and moments.
+    </p>
+
+    <div class="footer-nav">
+
+        <a href="#" onclick="openLetter()">Letter</a>
+        <a href="#" onclick="openGallery()">Gallery</a>
+        <a href="#" onclick="openSong()">Song</a>
+        <a href="#" onclick="openAbout()">About Us</a>
+
+    </div>
+
+    <div class="footer-social">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/1UMLwfSqCj/" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/limeee0_0_0?igsh=cDBxZnM5N3hhaWdt" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <!-- Gmail -->
+    <a href="mailto: emiljohnrey143@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/639164368390" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</div>
+
+    <p class="footer-copy">
+        Made by ©Artificial Intelligence and Emil for Kenneth
+    </p>
+
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
