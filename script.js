@@ -126,28 +126,50 @@ function returnHome(){
 // ===============================
 
 const letterText = `
-My Love,
 
-I don't know how to start this letter, but I want to begin by saying thank you. Thank you for your support and for staying with me through everything. I never expected that I would find you during such a difficult time in my life.
+Date: July 01, 2026 
 
-I also want to apologize for the days when I wasn't able to show you how much I love and appreciate you. I'm sorry for the changes you've noticed in me. However, those changes do not mean an ending—they are simply the beginning of something new.
+Dear Kenneth,
 
-There were times when I couldn't get you out of my mind. There were times when I felt like I couldn't do anything without you. But as time passed, I slowly became okay. The sadness started to fade, and I learned how to do the things I used to do before we met.
+I never imagined this day would come. I never expected that someone like you would enter my life.
 
-What I mean is that we should continue growing as individuals. We should keep doing the things we loved and dreamed about before we met each other. Love can wait, and sometimes giving each other space is also a way of loving.
+First of all, thank you for accepting me completely—for loving me despite all my flaws. Thank you for being there on the days when I didn't even know how to smile. Thank you for making me feel valued, even if it was only for a chapter of my life. You made me feel loved in a way I will never forget.
 
-I hope we both continue to grow and achieve our dreams together someday. Whether that day finds us still together or not, you will always have a special place in my heart. You are one of my favorite characters in the story of my life—a story that remains untold.
+But despite all of that, I'm truly sorry because I can no longer continue what we have.
 
-Please always take care of yourself. You are important, and we only have one life to live. Since I am far from your side, I hope you stay strong and continue moving forward no matter what challenges come your way.
+The truth is, I've only recently realized that I'm not ready to spend my life committed to one person. I still have so much growing to do. I want the freedom to discover who I am, to meet new people without the weight of commitment, and to understand myself before I can truly give my heart to someone else.
 
-If life ever becomes too difficult and you feel like you can't handle it alone, remember that I am here for you, even from afar. You are very important to me, and I will always care about your well-being.
+You came into my life at the wrong time—not because you were wrong, but because I was still becoming the person I'm meant to be. My life is still full of confusion, and I'm still trying to find my own path.
 
-I will continue to pray for you, for your happiness, your safety, and for the path that lies ahead of us. No matter where life takes us, I hope that we both find the strength and courage to keep going.
-Lastly, I want to say this: if an opportunity comes your way, don't hesitate to take it. Grab it and make the most of it. No matter how far apart we may be, I will always be here, supporting you from a distance.
+Please believe me when I say this isn't because I've fallen for someone else. There is no one else. This decision isn't about replacing you; it's about finding myself again. I need to be free, to rebuild who I am, and to become someone I can be proud of.
 
-Again, I love you, my Kenneth.
+I know I fell short in so many ways. I couldn't love you the way you loved me. I couldn't return everything you gave so selflessly. That wasn't your fault—it was mine. And I will always carry the guilt of knowing that I couldn't give you the love you truly deserved.
 
-— Emil ❤️
+I'm sorry for coming into your life if all I did was leave you with pain. I'm sorry if you spent so much time, love, and effort on someone who couldn't stay. You deserved someone who was certain about you from the very beginning.
+
+I'm also sorry that we won't get to fulfill the dreams we once talked about together. It breaks my heart knowing that those dreams will remain unfinished because of me.
+
+Please take care of yourself. Keep chasing your dreams. You are an incredible person—kind, brave, and stronger than you realize. I sincerely hope that life gives you every happiness you've always deserved.
+
+No amount of "I'm sorry" will ever be enough to heal the pain I've caused. If I could take away your hurt, I would. But all I can do now is apologize with all my heart and hope that, one day, you'll find peace.
+
+Even though our story won't last forever, I want you to know that I truly loved you. My love may not have been enough, but it was real.
+
+I hope that someday you'll meet someone who can love you better than I ever could—someone who will fill every space where I failed and give you the future that I couldn't.
+
+I will never forget you. You will always remain one of the most beautiful memories of my life. I'll continue praying for your healing, your happiness, and for the day when the wounds I caused become nothing more than distant memories.
+
+I deeply regret everything I've done. Some mistakes cannot be undone, and I know I may never deserve your forgiveness. But I will carry the lessons you taught me for the rest of my life.
+
+I don't know how to continue this letter anymore. Maybe this is where my words have to end.
+
+I love you, Kenneth.
+
+Goodbye.
+
+
+
+— Emil John Rey 
 `;
 
 function startTyping(){
